@@ -1,23 +1,24 @@
-package com.xitij.android.isen_artwork;
+package com.xitij.android.isen_artwork.ui;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.xitij.android.isen_artwork.R;
 
-public class LauncherActivity extends ActionBarActivity {
+public class LoginScreen extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_launcher);
+        setContentView(R.layout.activity_login_screen);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_launcher, menu);
+        getMenuInflater().inflate(R.menu.menu_login_screen, menu);
         return true;
     }
 
