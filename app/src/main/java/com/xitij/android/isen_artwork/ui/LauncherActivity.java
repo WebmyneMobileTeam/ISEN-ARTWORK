@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.xitij.android.isen_artwork.R;
+import com.xitij.android.isen_artwork.helpers.Functions;
 
 
 public class LauncherActivity extends ActionBarActivity {
@@ -24,6 +25,9 @@ public class LauncherActivity extends ActionBarActivity {
 
             @Override
             public void onFinish() {
+
+                Functions.fireIntent(LauncherActivity.this,LoginScreen.class);
+                finish();
 
             }
         }.start();
