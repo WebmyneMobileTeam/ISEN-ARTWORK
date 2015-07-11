@@ -22,4 +22,7 @@ public class Constants {
 
 	public static String IMAGE_PREFIX = "http://jumpsum.com/";
 
+    public static String BASE_URL = "http://isen.net/mobileapi/";
+    public static String API_LOGIN = BASE_URL + "mobile_signup/";
+
 }
