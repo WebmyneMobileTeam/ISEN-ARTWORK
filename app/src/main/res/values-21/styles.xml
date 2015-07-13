@@ -6,7 +6,7 @@
         <item name="@android:colorPrimaryDark">@color/paylabas_btn_active</item>
         <item name="@android:drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="android:textColorPrimary">@android:color/white</item>
-        <item name="@android:colorAccent">@color/primaryColor</item>
+        <item name="@android:colorAccent">#fff</item>
     </style>
 
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">

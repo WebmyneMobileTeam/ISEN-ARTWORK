@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xitij.android.isen_artwork" >
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".helpers.MyApplication"
@@ -22,6 +22,10 @@
         <activity
             android:name=".ui.LoginScreen"
             android:label="@string/title_activity_login_screen" >
+        </activity>
+        <activity
+            android:name=".ui.AddArtWorkScreen"
+            android:label="@string/title_activity_add_art_work_screen" >
         </activity>
     </application>
 

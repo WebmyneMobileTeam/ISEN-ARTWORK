@@ -9,13 +9,11 @@
     tools:context=".LauncherActivity"
     android:background="@color/primaryColor">
 
-    <TextView
-        android:fontFamily="sans-serif-condensed"
-        android:textSize="42sp"
-        android:textColor="@android:color/white"
-        android:text="ISEN ARTWORK"
-        android:layout_centerInParent="true"
-        style="@style/both_wrap_content" />
+   <ImageView
+       android:layout_centerInParent="true"
+       android:src="@drawable/logo"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content" />
 
 
 </RelativeLayout>

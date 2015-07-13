@@ -8,6 +8,10 @@
     <color name="primaryColorDark">#007ECB</color>
     <color name="transperent">#00000000</color>
 
+    <color name="disabled_color">#44000000</color>
+    <color name="error_color">#E7492E</color>
+
+
     <drawable name="list_normal">#00000000</drawable>
     <drawable name="list_selected">#40000000</drawable>
 

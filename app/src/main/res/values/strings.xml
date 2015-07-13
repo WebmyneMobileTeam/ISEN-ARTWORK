@@ -1,7 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ISEN-ARTWORK</string>
 
+    <string name="app_name">ISEN-ARTWORK</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_login_screen">LoginScreen</string>
+    <string name="title_activity_add_art_work_screen">AddArtWorkScreen</string>
+
+    <string-array name="arr">
+
+        <item>Item One</item>
+        <item>Item Two</item>
+        <item>Item Three</item>
+
+    </string-array>
+
 </resources>

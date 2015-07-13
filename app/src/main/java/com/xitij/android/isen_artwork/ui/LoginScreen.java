@@ -15,6 +15,7 @@ import com.xitij.android.isen_artwork.R;
 import com.xitij.android.isen_artwork.helpers.CallWebService;
 import com.xitij.android.isen_artwork.helpers.Constants;
 import com.xitij.android.isen_artwork.helpers.Functions;
+import com.xitij.android.isen_artwork.helpers.PrefUtils;
 import com.xitij.android.isen_artwork.model.User;
 
 public class LoginScreen extends ActionBarActivity implements View.OnClickListener {
@@ -30,10 +31,8 @@ public class LoginScreen extends ActionBarActivity implements View.OnClickListen
 
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnLogin.setOnClickListener(this);
-
         edName = (EditText) findViewById(R.id.edName);
         edPassword = (EditText) findViewById(R.id.edPassword);
-
 
     }
 
@@ -46,14 +45,11 @@ public class LoginScreen extends ActionBarActivity implements View.OnClickListen
                 processLogin();
                 break;
         }
-
     }
 
     private void processLogin() {
 
-
         final ProgressDialog pd = ProgressDialog.show(LoginScreen.this,"Please wait","Fetching user data",false);
-
         String push = String.format("%s/%s",edName.getText().toString(),edPassword.getText().toString());
         new CallWebService(Constants.API_LOGIN + push, CallWebService.TYPE_JSONOBJECT) {
             @Override
@@ -66,11 +62,14 @@ public class LoginScreen extends ActionBarActivity implements View.OnClickListen
                 if(currentUser.loginState.success.equalsIgnoreCase("1")){
 
                     Functions.displayMessage(LoginScreen.this,"Login Successfull");
+                    PrefUtils.setUser(LoginScreen.this,currentUser);
+                    Functions.fireIntent(LoginScreen.this,AddArtWorkScreen.class);
+                    PrefUtils.setLogin(LoginScreen.this,true);
+                    finish();
+
                 }else{
                     Functions.displayMessage(LoginScreen.this,"Login Failed");
-
                 }
-
             }
 
             @Override

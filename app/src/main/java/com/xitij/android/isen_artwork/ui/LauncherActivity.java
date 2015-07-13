@@ -8,6 +8,7 @@ import android.view.MenuItem;
 
 import com.xitij.android.isen_artwork.R;
 import com.xitij.android.isen_artwork.helpers.Functions;
+import com.xitij.android.isen_artwork.helpers.PrefUtils;
 
 
 public class LauncherActivity extends ActionBarActivity {
@@ -20,13 +21,18 @@ public class LauncherActivity extends ActionBarActivity {
         new CountDownTimer(1500,1000) {
             @Override
             public void onTick(long l) {
-
             }
 
             @Override
             public void onFinish() {
 
-                Functions.fireIntent(LauncherActivity.this,LoginScreen.class);
+                if(PrefUtils.isLoggedIn(LauncherActivity.this)){
+                    Functions.fireIntent(LauncherActivity.this,AddArtWorkScreen.class);
+                }else{
+                    Functions.fireIntent(LauncherActivity.this,LoginScreen.class);
+                }
+
+
                 finish();
 
             }

@@ -1,0 +1,279 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/primaryColor"
+    tools:context="com.xitij.android.isen_artwork.ui.AddArtWorkScreen">
+
+    <FrameLayout
+        android:id="@+id/frameHome"
+        style="@style/match_wrap_content">
+
+        <ImageView
+            android:layout_gravity="left|center_vertical"
+            android:src="@drawable/logo"
+            android:layout_height="56dp"
+            android:layout_width="56dp" />
+
+        <LinearLayout
+            android:id="@+id/linearSubmit"
+            android:gravity="center"
+            android:layout_gravity="right|center_vertical"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginRight="8dp"
+                android:textSize="22sp"
+                android:text="Submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+
+                android:src="@mipmap/ic_launcher"
+                android:layout_height="56dp"
+                android:layout_width="56dp" />
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearHome"
+        android:layout_marginBottom="16dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        style="@style/both_wrap_content">
+
+        <TextView
+            android:textColor="@android:color/white"
+            android:text="PROFILE"
+            style="@style/both_wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:textColor="@android:color/white"
+            android:text="CONTACT"
+            style="@style/both_wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:textColor="@android:color/white"
+            android:text="HELP"
+            style="@style/both_wrap_content" />
+
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:textColor="@android:color/white"
+            android:text="ABOUT ISEN"
+            style="@style/both_wrap_content" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="top|center_horizontal"
+        android:padding="8dp"
+        android:layout_below="@id/frameHome"
+        android:layout_above="@id/linearHome"
+        android:orientation="vertical"
+        style="@style/match_wrap_content">
+
+        <EditText
+            android:singleLine="true"
+            android:layout_marginTop="16dp"
+            android:textSize="18sp"
+            android:textColorHint="#d1d1d1"
+            android:gravity="center"
+            android:background="@drawable/ed_rounded"
+            android:layout_marginRight="48dp"
+            android:layout_marginLeft="48dp"
+            android:hint="Artwork Title"
+            android:id="@+id/edName"
+            android:padding="8dp"
+            style="@style/match_wrap_content" />
+
+        <com.xitij.android.isen_artwork.ui.widget.MaterialSpinner
+
+            android:id="@+id/spinner_type"
+
+            android:textSize="18sp"
+            app:ms_multiline="false"
+            app:ms_hint="Select Type"
+            app:ms_floatingLabelText="floating label"
+            app:ms_baseColor="@android:color/white"
+            app:ms_highlightColor="@color/primaryColor"
+            app:ms_errorColor="@color/error_color"
+            app:ms_typeface="typeface.ttf"
+            app:ms_thickness="1dp"
+            app:ms_arrowColor="#ffffff"
+            app:ms_arrowSize="16dp"
+            app:ms_alignLabels="false"
+            app:ms_floatingLabelColor="#fff"
+            android:layout_marginRight="48dp"
+            android:layout_marginLeft="48dp"
+            style="@style/match_wrap_content" />
+
+
+        <RadioGroup
+            android:layout_marginTop="8dp"
+            android:id="@+id/rg"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:textSize="18sp"
+                android:text="Unique"
+                android:id="@+id/rbUnique"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:textSize="18sp"
+                android:text="Multiple"
+                android:id="@+id/rbMultiple"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
+
+        <com.xitij.android.isen_artwork.ui.widget.MaterialSpinner
+            android:id="@+id/spinner_medium"
+
+            android:textSize="18sp"
+            app:ms_multiline="false"
+            app:ms_hint="Select Medium"
+            app:ms_floatingLabelText="floating label"
+            app:ms_baseColor="@android:color/white"
+            app:ms_highlightColor="@color/primaryColor"
+            app:ms_errorColor="@color/error_color"
+            app:ms_typeface="typeface.ttf"
+            app:ms_thickness="1dp"
+            app:ms_arrowColor="#ffffff"
+            app:ms_arrowSize="16dp"
+            app:ms_alignLabels="false"
+            app:ms_floatingLabelColor="#fff"
+            android:layout_marginRight="48dp"
+            android:layout_marginLeft="48dp"
+            style="@style/match_wrap_content" />
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            style="@style/match_wrap_content">
+
+            <EditText
+                android:singleLine="true"
+                android:textColorHint="#d1d1d1"
+                android:gravity="center"
+                android:hint="width"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:background="@drawable/ed_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:singleLine="true"
+                android:textColorHint="#d1d1d1"
+                android:gravity="center"
+                android:hint="height"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:background="@drawable/ed_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:singleLine="true"
+                android:textColorHint="#d1d1d1"
+                android:gravity="center"
+                android:hint="depth"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:background="@drawable/ed_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:singleLine="true"
+                android:textColorHint="#d1d1d1"
+                android:gravity="center"
+                android:hint="weight"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:background="@drawable/ed_rounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <EditText
+            android:singleLine="true"
+            android:layout_marginTop="8dp"
+            android:textSize="18sp"
+            android:textColorHint="#d1d1d1"
+            android:gravity="center"
+            android:background="@drawable/ed_rounded"
+            android:layout_marginRight="48dp"
+            android:layout_marginLeft="48dp"
+            android:hint="Note"
+            android:padding="8dp"
+            style="@style/match_wrap_content" />
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/linearImages"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            style="@style/match_wrap_content">
+
+            <com.xitij.android.isen_artwork.ui.widget.SquareImageView
+                android:scaleType="centerInside"
+                android:layout_margin="8dp"
+                android:background="#a1a1a1"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.xitij.android.isen_artwork.ui.widget.SquareImageView
+                android:scaleType="centerInside"
+                android:layout_margin="8dp"
+                android:background="#a1a1a1"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.xitij.android.isen_artwork.ui.widget.SquareImageView
+                android:scaleType="centerInside"
+                android:layout_margin="8dp"
+                android:background="#a1a1a1"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
