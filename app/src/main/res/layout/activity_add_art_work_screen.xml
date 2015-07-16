@@ -6,7 +6,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingBottom="4dp"
     android:background="@color/primaryColor"
     tools:context="com.xitij.android.isen_artwork.ui.AddArtWorkScreen">
 
@@ -48,7 +48,7 @@
 
     <LinearLayout
         android:id="@+id/linearHome"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="4dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
@@ -82,7 +82,7 @@
 
     <LinearLayout
         android:gravity="top|center_horizontal"
-        android:padding="8dp"
+        android:padding="4dp"
         android:layout_below="@id/frameHome"
         android:layout_above="@id/linearHome"
         android:orientation="vertical"
@@ -90,7 +90,7 @@
 
         <EditText
             android:singleLine="true"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             android:textSize="18sp"
             android:textColorHint="#d1d1d1"
             android:gravity="center"
@@ -125,21 +125,21 @@
 
 
         <RadioGroup
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:id="@+id/rg"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:textSize="18sp"
+                android:textSize="12sp"
                 android:text="Unique"
                 android:id="@+id/rbUnique"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <RadioButton
-                android:textSize="18sp"
+                android:textSize="12sp"
                 android:text="Multiple"
                 android:id="@+id/rbMultiple"
                 android:layout_width="wrap_content"
@@ -149,26 +149,21 @@
 
         <com.xitij.android.isen_artwork.ui.widget.MaterialSpinner
             android:id="@+id/spinner_medium"
-
             android:textSize="18sp"
-            app:ms_multiline="false"
             app:ms_hint="Select Medium"
-            app:ms_floatingLabelText="floating label"
             app:ms_baseColor="@android:color/white"
             app:ms_highlightColor="@color/primaryColor"
             app:ms_errorColor="@color/error_color"
-            app:ms_typeface="typeface.ttf"
             app:ms_thickness="1dp"
             app:ms_arrowColor="#ffffff"
             app:ms_arrowSize="16dp"
             app:ms_alignLabels="false"
-            app:ms_floatingLabelColor="#fff"
             android:layout_marginRight="48dp"
             android:layout_marginLeft="48dp"
             style="@style/match_wrap_content" />
 
         <LinearLayout
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:orientation="horizontal"
             style="@style/match_wrap_content">
 
@@ -229,7 +224,7 @@
 
         <EditText
             android:singleLine="true"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:textSize="18sp"
             android:textColorHint="#d1d1d1"
             android:gravity="center"
@@ -243,13 +238,13 @@
         <LinearLayout
             android:gravity="center"
             android:id="@+id/linearImages"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:orientation="horizontal"
             style="@style/match_wrap_content">
 
             <com.xitij.android.isen_artwork.ui.widget.SquareImageView
                 android:scaleType="centerInside"
-                android:layout_margin="8dp"
+                android:layout_margin="4dp"
                 android:background="#a1a1a1"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
@@ -257,7 +252,7 @@
 
             <com.xitij.android.isen_artwork.ui.widget.SquareImageView
                 android:scaleType="centerInside"
-                android:layout_margin="8dp"
+                android:layout_margin="4dp"
                 android:background="#a1a1a1"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
@@ -265,7 +260,7 @@
 
             <com.xitij.android.isen_artwork.ui.widget.SquareImageView
                 android:scaleType="centerInside"
-                android:layout_margin="8dp"
+                android:layout_margin="4dp"
                 android:background="#a1a1a1"
                 android:layout_weight="1"
                 android:layout_width="match_parent"

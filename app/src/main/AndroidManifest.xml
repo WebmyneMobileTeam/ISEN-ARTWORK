@@ -27,6 +27,15 @@
             android:name=".ui.AddArtWorkScreen"
             android:label="@string/title_activity_add_art_work_screen" >
         </activity>
+
+        <activity
+            android:name="com.darsh.multipleimageselect.activities.AlbumSelectActivity"
+            android:theme="@style/MultipleImageSelectTheme">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
