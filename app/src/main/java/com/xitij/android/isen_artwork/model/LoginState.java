@@ -12,6 +12,8 @@ public class LoginState {
     public String success;
     @SerializedName("account_id")
     public String account_id;
+    @SerializedName("key")
+    public String key;
 
 
 }
